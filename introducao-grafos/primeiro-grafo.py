@@ -1,17 +1,15 @@
 import networkx as nx
-import matplotlib.pyplot as plt
+import sys
+sys.path.append("/home/eliane/ufcg/grafos-networkx/utils")
+from functions import *
 
-def draw_graph(S):
-    nx.draw_networkx(S)
-    plt.show()
+grafo = nx.Graph()
+print(f"Grafo nulo: {grafo}")
 
-S = nx.Graph()
-print(f"Grafo nulo: {S}")
+grafo.add_nodes_from(['x','y','z','w'])
+print(f"Vértices: {grafo.nodes}")
 
-S.add_nodes_from(['x','y','z','w'])
-print(f"Vértices: {S.nodes}")
+grafo.add_edges_from([('x','y'),('x','w'),('x','z'),('y','z')])
+print(f"Arestas: {grafo.edges}")
 
-S.add_edges_from([('x','y'),('x','w'),('x','z'),('y','z')])
-print(f"Arestas: {S.edges}")
-
-draw_graph(S)
+draw_graph(grafo)

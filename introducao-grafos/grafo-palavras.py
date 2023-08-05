@@ -1,5 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("/home/eliane/ufcg/grafos-networkx/utils")
 from utils import draw_graph
 
 def adjacentes (p1,p2):

@@ -1,4 +1,6 @@
 import networkx as nx
+import sys
+sys.path.append("/home/eliane/ufcg/grafos-networkx/utils")
 from utils import draw_graph
 
 G4 = nx.Graph()
